@@ -56,9 +56,23 @@ const user2=[
 ]
 
 // console.log(user2[1].name);//rama
-console.log(Object.keys(user));//[ 'name', 'email' ]
-console.log(Object.values(user));//[ 'rman', 'rmangmail.com' ]
-console.log(Object.entries(user));//[ [ 'name', 'rman' ], [ 'email', 'rmangmail.com' ] ]
+// console.log(Object.keys(user));//[ 'name', 'email' ]
+// console.log(Object.values(user));//[ 'rman', 'rmangmail.com' ]
+// console.log(Object.entries(user));//[ [ 'name', 'rman' ], [ 'email', 'rmangmail.com' ] ]
 
 
-console.log(user.hasOwnProperty("names"));//check the property present or not
+// console.log(user.hasOwnProperty("names"));//check the property present or not
+
+//destructering
+
+const anotherNewUser={
+    name:"pen",
+    price:10,
+    sellerOfDukkan:"dukkan"
+    
+}
+
+// anotherNewUser.sellerOfDukkan=> const {sellerOfDukkan:bhaiya}=anotherNewUser
+const {sellerOfDukkan:bhaiya}=anotherNewUser//sellerOfDukkan can accessed by calling bhaiya
+
+console.log(bhaiya);
