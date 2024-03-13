@@ -1,1 +1,1 @@
-con
+user1.greeting()
