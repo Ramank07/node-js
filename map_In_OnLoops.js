@@ -30,6 +30,7 @@ naman :- value
 */
 
 
+
 //***We cannot iterate like this in object */
 
 //for object we use (for_In)

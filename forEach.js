@@ -52,6 +52,7 @@ saket 3 [ 'raman', 'mota', 'adi', 'saket' ]
         code:"java"
     }
 ]
+
 lang.forEach((item)=>{
     console.log(item.lan,"=",item.code);
 })
