@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body style="background-color: #212121; color: white">
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    //add Element through basic process
+    function addlan(langName) {
+      const li = document.createElement("li");
+
+      li.innerHTML = `${langName}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addlan("js");
+    addlan("java");
+
+    //add Element through optimise process
+
+    function optLan(NewLang) {
+      const li = document.createElement("li");
+      const lang = document.createTextNode(`${NewLang}`);
+      li.appendChild(lang);
+      document.querySelector(".language").appendChild(li);
+    }
+    optLan("math");
+
+    //Edit element
+
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // console.log(secondLang);
+    // secondLang.innerHTML="mojo"// it is not optimise
+    const newLi = document.createElement("li");
+    newLi.textContent = "mojo";
+    secondLang.replaceWith(newLi);
+
+    //delete
+
+    const last = document.querySelector("li:last-child");
+    // console.log(last);
+    last.remove();
+  </script>
+</html>
